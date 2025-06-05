@@ -17,20 +17,13 @@ st.markdown("""
 """)
 
 
-# Read HTML file
-with open("ptuj_climate_map.html", "rb") as f:
-    html_bytes = f.read()
-
-# Method 1: Base64 iframe (often works better)
-html_b64 = base64.b64encode(html_bytes).decode()
-iframe_src = f"data:text/html;base64,{html_b64}"
+external_url = "https://deankorosak.github.io/ptuj_climate_map.html"
 
 st.markdown(f"""
-<iframe src="{iframe_src}" 
+<iframe src="{external_url}" 
         width="100%" 
         height="700" 
-        frameborder="0" 
-        sandbox="allow-scripts allow-same-origin allow-forms">
+        frameborder="0">
 </iframe>
 """, unsafe_allow_html=True)
 
