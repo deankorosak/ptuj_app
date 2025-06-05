@@ -1,5 +1,6 @@
 # ptuj_map_viewer.py
 import streamlit as st
+import base64
 
 st.set_page_config(
     page_title="Ptuj Climate Analysis", 
